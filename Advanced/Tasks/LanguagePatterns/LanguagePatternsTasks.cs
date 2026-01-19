@@ -14,7 +14,7 @@ public class LanguagePatternsTasks
     /// <summary>
     /// Задание 4.3: Используйте pattern matching для определения типа объекта.
     /// </summary>
-    public string GetObjectType(object obj)
+    public string GetObjectType(object? obj)
     {
         return obj switch
         {
@@ -31,7 +31,7 @@ public class LanguagePatternsTasks
     /// <summary>
     /// Задание 4.4: Используйте switch expression для вычисления стоимости доставки.
     /// </summary>
-    public decimal CalculateShippingCost(string shippingType, decimal weight)
+    public decimal CalculateShippingCost(string? shippingType, decimal weight)
     {
         return shippingType?.ToLowerInvariant() switch
         {
@@ -47,7 +47,7 @@ public class LanguagePatternsTasks
     /// <summary>
     /// Задание 4.6: Используйте property patterns класса Product для проверки условий.
     /// </summary>
-    public string GetProductStatus(Product product)
+    public string GetProductStatus(Product? product)
     {
         return product switch
         {
