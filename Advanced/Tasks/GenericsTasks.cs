@@ -9,8 +9,13 @@ public class GenericsTasks
     /// Если коллекция пустая, возвращает default значение типа.
     /// В каждом задании используйте async/await.
     /// </summary>
-    public T GetFirstElement<T>(IEnumerable<T> collection)
+    public T? GetFirstElement<T>(IEnumerable<T>? collection)
     {
+        if (collection == null)
+        {
+            return default(T);
+        }
+
         foreach (var item in collection)
         {
             return item;
@@ -22,7 +27,7 @@ public class GenericsTasks
     /// <summary>
     /// Задание 1.2: Напишите generic метод, который фильтрует коллекцию по предикату.
     /// </summary>
-    public IEnumerable<T> Filter<T>(IEnumerable<T> collection, Func<T, bool> predicate)
+    public IEnumerable<T> Filter<T>(IEnumerable<T>? collection, Func<T, bool>? predicate)
     {
         if (collection == null)
         {
