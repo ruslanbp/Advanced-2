@@ -45,7 +45,7 @@ public class LanguagePatternsTasksTests
     [Fact]
     public void GetObjectTypeFloat_ReturnsFloat()
     {
-        var result = _sut.GetObjectType(2.50);
+        var result = _sut.GetObjectType(2.5f);
         Assert.Equal("Float", result);
     }
 
