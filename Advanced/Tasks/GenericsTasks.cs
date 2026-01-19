@@ -11,11 +11,6 @@ public class GenericsTasks
     /// </summary>
     public T GetFirstElement<T>(IEnumerable<T> collection)
     {
-        if (collection == null)
-        {
-            return default(T);
-        }
-
         foreach (var item in collection)
         {
             return item;
@@ -53,5 +48,4 @@ public class GenericsTasks
     /// <summary>
     /// Задание 1.4: Создайте generic интерфейс IComparable с методом CompareTo.
     /// </summary>
-
 }

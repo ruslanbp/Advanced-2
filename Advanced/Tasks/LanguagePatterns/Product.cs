@@ -5,7 +5,7 @@ namespace Advanced.Tasks.LanguagePatterns;
 /// </summary>
 public class Product
 {
-    public string Name { get; init; }
+    public string? Name { get; init; }
     public decimal Price { get; init; }
     public int Stock { get; init; }
 }
