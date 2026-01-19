@@ -1,5 +1,7 @@
 namespace Advanced.Tasks;
 
+using System.Collections.Generic;
+
 public class GenericsTasks
 {
     /// <summary>
@@ -9,7 +11,17 @@ public class GenericsTasks
     /// </summary>
     public T GetFirstElement<T>(IEnumerable<T> collection)
     {
-        throw new NotImplementedException();
+        if (collection == null)
+        {
+            return default(T);
+        }
+
+        foreach (var item in collection)
+        {
+            return item;
+        }
+
+        return default(T);
     }
 
     /// <summary>
@@ -17,7 +29,17 @@ public class GenericsTasks
     /// </summary>
     public IEnumerable<T> Filter<T>(IEnumerable<T> collection, Func<T, bool> predicate)
     {
-        throw new NotImplementedException();
+        if (collection == null)
+        {
+            return Enumerable.Empty<T>();
+        }
+
+        if (predicate == null)
+        {
+            return collection;
+        }
+
+        return collection.Where(predicate);
     }
 
     /// <summary>
@@ -25,10 +47,11 @@ public class GenericsTasks
     /// </summary>
     public void Swap<T>(ref T a, ref T b)
     {
-        throw new NotImplementedException();
+        (a, b) = (b, a);
     }
 
     /// <summary>
     /// Задание 1.4: Создайте generic интерфейс IComparable с методом CompareTo.
     /// </summary>
+
 }
